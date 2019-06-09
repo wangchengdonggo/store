@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.21.RELEASE'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'org.springframework.boot'
+
+group = 'com.wcd'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.4'
+    runtime 'mysql:mysql-connector-java'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'com.alibaba:druid:1.0.14'
+
+    compile 'com.alibaba:fastjson:1.2.31'
+
+
+    compile 'com.google.guava:guava:22.0'
+
+    compile 'org.reflections:reflections:0.9.11'
+
+    compile 'org.apache.commons:commons-lang3:3.5'
+    compile 'commons-io:commons-io:2.5'
+    compile 'commons-beanutils:commons-beanutils:1.9.3'
+
+}
